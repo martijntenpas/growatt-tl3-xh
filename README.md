@@ -9,9 +9,9 @@ Met deze informatie is het mogelijk om een Growatt MOD ### TL3-XH omvormer te ko
 
 ## Kabel maken
 Maak eerst een kabel tussen je converter en de Modbus stekker.
-USB GND naar Modbus 15
-USB A+ naar Modbus 3
-USB B- naar Modbus 4
+- USB GND naar Modbus 15
+- USB A+ naar Modbus 3
+- USB B- naar Modbus 4
 
 ## Home Assistant instellen
 1. Sluit de USB aan op een vrije USB poort van je Home Assistant installatie
@@ -44,7 +44,7 @@ modbus:
         slave: 1
 ```
 
-* De sensoren zijn puur ter illustratie, je kan hier zelf invoeren wat je wil. Je kan deze info vinden in de Modbus documentatie van Growatt (https://www.amosplanet.org/modbus-protocol-type-for-grid-hybrid-inverter/). Echter voor het in- en uitschakelen van de omvormer is dit niet van toepassing. *
+_De sensoren zijn puur ter illustratie, je kan hier zelf invoeren wat je wil. Je kan deze info vinden in de Modbus documentatie van Growatt (https://www.amosplanet.org/modbus-protocol-type-for-grid-hybrid-inverter/). Echter voor het in- en uitschakelen van de omvormer is dit niet van toepassing._
 
 7. Herstart home assistant
 8. Je kan nu communiceren met je Growatt omvormer.
