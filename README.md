@@ -21,7 +21,8 @@ USB B- naar Modbus 4
 5. Open een tekstbewerker in Home Assistant en ga naar de configuration.yaml
 6. Voeg de volgende code in:
 
-`modbus:
+```
+modbus:
   - name: modbus_hub
     type: serial
     port: /dev/ttyACM2
@@ -40,7 +41,8 @@ USB B- naar Modbus 4
         input_type: holding
         address: 5
         scan_interval: 10
-        slave: 1`
+        slave: 1
+```
 
 * De sensoren zijn puur ter illustratie, je kan hier zelf invoeren wat je wil. Je kan deze info vinden in de Modbus documentatie van Growatt (https://www.amosplanet.org/modbus-protocol-type-for-grid-hybrid-inverter/). Echter voor het in- en uitschakelen van de omvormer is dit niet van toepassing. *
 
@@ -48,7 +50,8 @@ USB B- naar Modbus 4
 8. Je kan nu communiceren met je Growatt omvormer.
 9. Met deze YAML code kan je op de dashboard knoppen maken om in- of uit te schakelen:
 ![image](https://github.com/martijntenpas/growatt-tl3-xh/assets/84871327/2e324d04-f251-4f96-9671-097643c4989f)
-`type: grid
+```
+type: grid
 cards:
   - show_name: true
     show_icon: true
@@ -78,7 +81,7 @@ cards:
         value: 0
     entity: sensor.custom_modbus_energy_today
     name: Growatt Off
-`
+```
 
 Voor het inschakelen kan je ook een automatisering gebruiken
 1. Actie > Service Aanroepen > Schrijfregeister
